@@ -2,9 +2,13 @@
 from flask import Flask, jsonify, request
 from pathlib import Path
 import base64
+from flask_cors import CORS
+
+
 
 # create the application object
 app = Flask(__name__)
+CORS(app)
 
 # use decorators to link the function to a url
 @app.route('/')
@@ -41,13 +45,13 @@ def getCN():
             "fileName": json["fileName"],
             "file": encoded_string.decode("utf-8")
         })
-        code = 200 
+        code = 200
     else:
         svg = jsonify({
             "success": False,
             "message": "Erreur lors de la récupération du fichier"
         })
-        code = 404
+        code = 404 
     svg.headers.add('Access-Control-Allow-Origin', '*')
     return svg, code
 

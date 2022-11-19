@@ -1,4 +1,4 @@
-GET http://89.87.125.211:4000/file HTTP/1.1
+POST http://89.87.125.211:4000/file HTTP/1.1
 Content-Type: application/json
 
 {
