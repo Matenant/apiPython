@@ -122,6 +122,26 @@ def pays():
     pays.headers.add('Access-Control-Allow-Origin', '*')
     return pays, 200
 
+@app.get('/france')
+def france():
+    france = jsonify([
+        { "nom":"Auvergne-Rhône-Alpes", "code": "FR-ARA", "taux": 21 },
+        { "nom":"Bourgogne-Franche-Comté", "code":"FR-BFC", "taux": 31},
+        { "nom":"Bretagne", "code":"FR-BRE", "taux": 33},
+        { "nom":"Corse", "code":"FR-COR", "taux": 12},
+        { "nom":"Centre-Val de Loire", "code":"FR-CVL", "taux": 18},
+        { "nom":"Grand Est", "code":"FR-GES", "taux": 22},
+        { "nom":"Hauts-de-France", "code":"FR-HDF", "taux": 38},
+        { "nom":"Île-de-France", "code":"FR-IDF", "taux": 34},
+        { "nom":"Normandie", "code":"FR-NOR", "taux": 4},
+        { "nom":"Nouvelle-Aquitaine", "code":"FR-NAQ", "taux": 17},
+        { "nom":"Occitanie", "code":"FR-OCC", "taux": 28},
+        { "nom":"Pays de la Loire", "code":"FR-PDL", "taux": 30},
+        { "nom":"Provence-Alpes-Côte d'Azur", "code":"FR-PAC", "taux": 9}
+    ])
+    france.headers.add('Access-Control-Allow-Origin', '*')
+    return france, 200
+
 
 @app.get('/infoSvg')
 def infoSvg():
