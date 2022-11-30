@@ -1,0 +1,34 @@
+DROP TABLE IF EXISTS persons;
+
+CREATE TABLE persons (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'created' TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    'name' TEXT NOT NULL,
+    'birth' TEXT NOT NULL,
+    'country' TEXT NOT NULL,
+    'nb_child' INTEGER
+);
+
+DROP TABLE IF EXISTS regions;
+
+CREATE TABLE regions (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'created' TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    'name' TEXT NOT NULL,
+    'code' TEXT NOT NULL,
+    'taux' INTEGER
+);
+
+DROP TABLE IF EXISTS svgs;
+
+CREATE TABLE svgs (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'created' TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    'name' TEXT NOT NULL,
+    'nom' TEXT NOT NULL,
+    'largeur' FLOAT NOT NULL,
+    'hauteur' FLOAT NOT NULL,
+    'echelle' FLOAT NOT NULL,
+    'origineX' FLOAT NOT NULL,
+    'origineY' FLOAT NOT NULL
+);
