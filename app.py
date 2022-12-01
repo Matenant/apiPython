@@ -26,9 +26,10 @@ def get_auth_connection():
 def home():
     return "API pour les cours de l'IUT"  # return a string
 
-@app.get('/pays')
+@app.post('/pays')
 def pays():
     json = request.get_json()
+    # print(request.headers.get('Authorization'))
     
     tok = user.login_token(json)
     if (tok != True):
@@ -48,7 +49,6 @@ def pays():
 
 @app.post('/addPays')
 def addPays():
-
     data = {
         "message": [],
         "success": True
@@ -114,7 +114,7 @@ def france():
     france.headers.add('Access-Control-Allow-Origin', '*')
     return france, 200
 
-@app.get('/infoSvg')
+@app.post('/infoSvg')
 def infoSvg():
 
     json = request.get_json()

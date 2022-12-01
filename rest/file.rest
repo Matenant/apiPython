@@ -1,7 +1,7 @@
-POST http://127.0.0.1:5000/file HTTP/1.1
+POST http://89.87.125.211:4000/file HTTP/1.1
 Content-Type: application/json
 
 {
     "fileName": "cn.svg",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk4OTU3MjgsImlhdCI6MTY2OTgwOTMyOCwic3ViIjoyMjAyMjAwMH0.6QK0svj1pm2tYEwchLA4IkWUQ1fWrErxfE7sL_BJ03I"
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njk5MTM2MzAsImlhdCI6MTY2OTgyNzIzMCwic3ViIjoyMjAyMjAwMH0.EjJrgStNYdWogPDxgNVmlA-Iva0ec0JU0hxu1_T2LME"
 }
